@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="学海无涯...">
+    <title>Android中图片处理优化 - 学海无涯...</title>
+    <meta name="author" content="小学生">
+    
+        <meta name="keywords" content="javascript,hexo">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="温故而知新，系统整理一下。">
+<meta name="keywords" content="javascript,hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Android中图片处理优化">
+<meta property="og:url" content="https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/index.html">
+<meta property="og:site_name" content="学海无涯...">
+<meta property="og:description" content="温故而知新，系统整理一下。">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://img.blog.csdn.net/20151124135208584">
+<meta property="og:updated_time" content="2017-02-15T06:15:47.771Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android中图片处理优化">
+<meta name="twitter:description" content="温故而知新，系统整理一下。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20151124135208584">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://1008611.github.io/assets/images/icon3.gif"/>
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg" />
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">学海无涯...</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">小学生</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>海纳百川，有容乃大</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/1008611" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://stackoverflow.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-center
+                    "
+             style="background-image:url('http://oims9p4rv.bkt.clouddn.com/android_zj.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">happy new year</span>
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            Android中图片处理优化
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-02-04T12:56:00+08:00">
+	
+		    2月 04, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Android总结篇/">Android总结篇</a>
+
+
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>  温故而知新，系统整理一下。<br>  <a id="more"></a></p>
+<h4 id="1-图片的三级缓存"><a href="#1-图片的三级缓存" class="headerlink" title="1. 图片的三级缓存"></a>1. 图片的三级缓存</h4><p><img src="http://img.blog.csdn.net/20151124135208584" alt="来源自网络"></p>
+<h5 id="1-1-什么是三级缓存"><a href="#1-1-什么是三级缓存" class="headerlink" title="1.1 什么是三级缓存?"></a>1.1 什么是三级缓存?</h5><pre><code>一级: 内存中的缓存图片对象(Bitmap), 用Map&lt;url, Bitmap&gt;
+二级: 手机sd卡的files或手机内部的files中缓存图片文件(xxx.jpg/png)
+三级: 服务器端保存图片文件
+</code></pre><h5 id="1-2-如何应用三级缓存"><a href="#1-2-如何应用三级缓存" class="headerlink" title="1.2 如何应用三级缓存?"></a>1.2 如何应用三级缓存?</h5><pre><code>例如: 如何根据url根据图片显示?
+1). 根据url从一级缓存(Map&lt;url, Bitmap&gt;)中取图片对象, 如果取到了, 直接显示
+          注意: 真实项目中使用LruCache&lt;String, Bitmap&gt;来缓存图片()
+2). 如果没有, 根据url中包含图片名称(文件名), 手机的sd卡或内部找对就图片文件加载成bitmap
+          如果找到了, 显示并保存到一级缓存
+3). 如果没有, 显示一个默认的图片, 根据url联网请求获取bitmap
+          如果没有, 显示一张代表错误的图片
+          如果有:
+               a. 保存到一级缓存
+               b. 保存到二级缓存
+               c. 显示图片
+</code></pre><h4 id="2-大图片的加载显示-避免OOM问题"><a href="#2-大图片的加载显示-避免OOM问题" class="headerlink" title="2. 大图片的加载显示(避免OOM问题):"></a>2. 大图片的加载显示(避免OOM问题):</h4><p>  1). 问题: 如果将大图片加载到内存中来显示, 可能会导致内存溢出(OOM)<br>  2). 解决思路: 对图片进行压缩加载(本质上只是读取了图片文件的部分数据)<br>  3). 具体办法:<br>       ①. 得到图片的宽高的方式: </p>
+<pre><code>1. BitmapFactory.Options options = new BitmapFactory.Options();   options.inJustDecodeBounds = true;   //设置只读取图片文件的边框,这样就不会加载整个图片文件BitmapFactory.decodeResource(getResources(), R.id.myimage, options);   int imageHeight = options.outHeight;  //图片的高 int imageWidth = options.outWidth;  //图片的宽String imageType = options.outMimeType; 
+
+          注意: 为了避免OOM异常，最好在解析每张图片的时候都先检查一下图片的大小，
+                  除非你非常信任图片的来源，保证这些图片都不会超出你程序的可用内存      
+</code></pre><p>   ②. 计算取样比例的方式:</p>
+<pre><code>1. public static int calculateInSampleSize(BitmapFactory.Options options,           int reqWidth, int reqHeight) {       // 源图片的高度和宽度       final int height = options.outHeight;       final int width = options.outWidth;       int inSampleSize = 1;       if (height &gt; reqHeight || width &gt; reqWidth) {           // 计算出实际宽高和目标宽高的比率           final int heightRatio = Math.round((float) height / (float) reqHeight);           final int widthRatio = Math.round((float) width / (float) reqWidth);           // 选择宽和高中最小的比率作为inSampleSize的值，这样可以保证最终图片的宽和高           // 一定都会大于等于目标的宽和高。           inSampleSize = heightRatio &lt; widthRatio ? heightRatio : widthRatio;       }       return inSampleSize;   } 
+
+      注意: 如果inSampleSize=3, 表示 宽和高上只读取原来数据的1/3, 这样整体大小压缩为原来的1/9
+</code></pre><p>   ③. 整体处理:</p>
+<pre><code>1. public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,           int reqWidth, int reqHeight) {       // 第一次解析将inJustDecodeBounds设置为true，只获取图片宽,高大小       final BitmapFactory.Options options = new BitmapFactory.Options();       options.inJustDecodeBounds = true; //不会加载整个图片文件    BitmapFactory.decodeResource(res, resId, options);       // 调用上面定义的方法计算inSampleSize值       options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);       // 使用获取到的inSampleSize值再次解析图片       options.inJustDecodeBounds = false; //会根据inSampleSize加载图片的部分数据到内存      return BitmapFactory.decodeResource(res, resId, options);   } 
+
+   调用代码如下:
+
+1. mImageView.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.id.myimage, 100, 100)); //将任意一张图片压缩成100*100的缩略图，并在ImageView上展示
+</code></pre><h4 id="3-缓存图片对象"><a href="#3-缓存图片对象" class="headerlink" title="3. 缓存图片对象"></a>3. 缓存图片对象</h4><p>  1). 在内存中缓存图片对象(Bitmap), 不要直接用Map<string, bitmap="">类型的容器, 因为这样会导致bitmap对象太多太大时而没有去释放, 最终导致OOM<br>  2). 在Android2.3之前, 一般都用Map<string, softreference<bitmap="">&gt;结构容器来缓存Bitmap对象, 这样在内存不太充足时, 垃圾回收器会将软引用对象释放.<br>       但从2.3开始, 垃圾回收器可能在正常情况下就回收软引用对象, 这样会降低缓存的效果<br>  3). Android的v4兼容包中提供了LruCache来做缓存容器, 它的基本原理为:<br>       把最近使用的对象用强引用存储在 LinkedHashMap 中，并且把最近最少使用的对象在缓存值达到预设定值之前从内存中移除</string,></string,></p>
+<pre><code>1.    private LruCache&lt;String, Bitmap&gt; mMemoryCache; //缓存Bitmap的容器    @Override   protected void onCreate(Bundle savedInstanceState) {       // 获取到可用内存的最大值，使用内存超出这个值会引起OutOfMemory异常。       // LruCache通过构造函数传入缓存值，以KB为单位。       int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);       // 使用最大可用内存值的1/8作为缓存的大小。       int cacheSize = maxMemory / 8;       mMemoryCache = new LruCache&lt;String, Bitmap&gt;(cacheSize) {           @Override           protected int sizeOf(String key, Bitmap bitmap) {               // 重写此方法来衡量每张图片的大小，默认返回图片数量。               return bitmap.getByteCount() / 1024;           }       };   }    public void addBitmapToMemoryCache(String key, Bitmap bitmap) {       if (getBitmapFromMemCache(key) == null) {           mMemoryCache.put(key, bitmap);       }   }    public Bitmap getBitmapFromMemCache(String key) {       return mMemoryCache.get(key);   }
+</code></pre><h4 id="4-主动释放bitmap对象"><a href="#4-主动释放bitmap对象" class="headerlink" title="4. 主动释放bitmap对象"></a>4. 主动释放bitmap对象</h4><p> if(!bmp.isRecycle() ){<br>    bmp.recycle()    // 回收图片所占的内存<br>    system.gc()      // 提醒系统及时回收<br> }</p>
+<h4 id="5-设置加载图片的色彩模式"><a href="#5-设置加载图片的色彩模式" class="headerlink" title="5. 设置加载图片的色彩模式:"></a>5. 设置加载图片的色彩模式:</h4><p>Android中有四种，分别是：<br> ALPHA_8：每个像素占用1byte内存<br> ARGB_4444:每个像素占用2byte内存<br> ARGB_8888:每个像素占用4byte内存(默认)<br> RGB_565:每个像素占用2byte内存</p>
+<p>默认的模式显示的图片质量是最高的, 但也是占用内存最大的, 而如果使用ARGB_4444模式, 占用的内存就会减少为1/2, 但显示效果差别不明显<br> BitmapFactory.Options options = new BitmapFactory.Options（）;<br> options.inPreferredConfig = Bitmap.Config.ARGB_4444;<br> Bitmap img = BitmapFactory.decodeFile（”/sdcard/1.png”， options）;</p>
+<p>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br>Android 三大图片加载框架比较</p>
+<p>1.哪三大图片加载框架？<br>        1)    Picasso<br>        2)    Glide<br>        3)    Fresco</p>
+<p>2.介绍:</p>
+<p>Picasso ：和Square的网络库一起能发挥最大作用，因为Picasso可以选择将网络请求的缓存部分交给了okhttp实现。</p>
+<p>Glide：模仿了Picasso的API，而且在他的基础上加了很多的扩展(比如gif等支持)，Glide默认的Bitmap格式是RGB_565，比    Picasso默认的ARGB_8888格式的内存开销要小一半；Picasso缓存的是全尺寸的(只缓存一种)，而Glide缓存的是跟ImageView尺寸相同的(即56<em>56和128</em>128是两个缓存) 。</p>
+<p>FB的图片加载框架Fresco：最大的优势在于5.0以下(最低2.3)的bitmap加载。在5.0以下系统，Fresco将图片放到一个特别的内存区域(Ashmem区)。当然，在图片不显示的时候，占用的内存会自动被释放。这会使得APP更加流畅，减少因图片内存占用而引发的OOM。为什么说是5.0以下，因为在5.0以后系统默认就是存储在Ashmem区了。</p>
+<p>3.总结：<br>       Picasso所能实现的功能，Glide都能做，无非是所需的设置不同。但是Picasso体积比起Glide小太多如果项目中网络请求本身用的就是okhttp或者retrofit(本质还是okhttp)，那么建议用Picasso，体积会小很多(Square全家桶的干活)。Glide的好处是大型的图片流，比如gif、Video，如果你们是做美拍、爱拍这种视频类应用，建议使用。<br>Fresco在5.0以下的内存优化非常好，代价就是体积也非常的大，按体积算Fresco&gt;Glide&gt;Picasso<br>不过在使用起来也有些不便（小建议：他只能用内置的一个ImageView来实现这些功能，用起来比较麻烦，我们通常是根据Fresco自己改改，直接使用他的Bitmap层）</p>
+<p>——相关资料推荐<br><a href="http://blog.csdn.net/q908555281/article/details/50011677" target="_blank" rel="external"> android 图片自定义三级缓存实现以及原理、图片错位解决</a><br><a href="http://www.cnblogs.com/snake-hand/archive/2013/06/08/3127558.html" target="_blank" rel="external">android中图片的三级cache策略（内存、文件、网络）</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/9316683" target="_blank" rel="external">Android高效加载大图、多图解决方案，有效避免程序OOM</a><br><a href="http://www.cnblogs.com/sunzn/archive/2013/03/14/2960293.html" target="_blank" rel="external"> Android 编程下图片的内存优化</a><br><a href="http://www.cnblogs.com/elliotta/p/3633752.html" target="_blank" rel="external">Android图片内存优化的几点心得</a><br><a href="http://blog.csdn.net/guolin_blog/article/details/9526203" target="_blank" rel="external">图片优化实例: Android照片墙应用实现，再多的图片也不怕崩溃</a><br><a href="http://www.cnblogs.com/yuzhongzheng/p/5228366.html" target="_blank" rel="external">Android 三大图片加载框架比较</a><br><a href="http://www.jb51.net/article/83152.htm" target="_blank" rel="external">Android的Glide库加载图片的用法及其与Picasso的对比</a></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android总结篇/">Android总结篇</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的数据存储/"  data-tooltip="Android中的数据存储">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的异步任务/" data-tooltip="Android中的异步任务">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2017/02/04/Android-整理/Android中图片处理优化/"
+     data-title="Android中图片处理优化" data-url="https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 小学生. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的数据存储/"  data-tooltip="Android中的数据存储">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的异步任务/" data-tooltip="Android中的异步任务">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/04/Android-整理/Android中图片处理优化/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">小学生</h4>
+        
+            <div id="about-card-bio"><p>海纳百川，有容乃大</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>程序猿</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                china
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/icon2.gif" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <h3 class="media-heading">处女作一定要短</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2014年7月1日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h3 id="从前有个太监…"><a href="#从前有个太监…" class="headerlink" title="从前有个太监…"></a>从前有个太监…</h3></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <h3 class="media-heading">线性表</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <h3 class="media-heading">数据结构基础</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <h3 class="media-heading">查找</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <h3 class="media-heading">栈与队列</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <h3 class="media-heading">排序</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <h3 class="media-heading">算法</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <h3 class="media-heading">图</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <h3 class="media-heading">串</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <h3 class="media-heading">树</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 150 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'wlq'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>

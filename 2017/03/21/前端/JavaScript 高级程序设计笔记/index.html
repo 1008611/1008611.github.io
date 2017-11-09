@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="学海无涯...">
+    <title>JavaScript 高级程序设计笔记 - 学海无涯...</title>
+    <meta name="author" content="小学生">
+    
+        <meta name="keywords" content="javascript,hexo">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="JavaScript 高级程序设计笔记">
+<meta name="keywords" content="javascript,hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="JavaScript 高级程序设计笔记">
+<meta property="og:url" content="https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/index.html">
+<meta property="og:site_name" content="学海无涯...">
+<meta property="og:description" content="JavaScript 高级程序设计笔记">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-6105b59ddbe4f71f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-af281d4396c68a76.png">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-41d9a2b0223dff69.png">
+<meta property="og:updated_time" content="2017-07-24T09:00:02.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 高级程序设计笔记">
+<meta name="twitter:description" content="JavaScript 高级程序设计笔记">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2901503-6105b59ddbe4f71f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://1008611.github.io/assets/images/icon3.gif"/>
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg" />
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">学海无涯...</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">小学生</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>海纳百川，有容乃大</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/1008611" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://stackoverflow.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-center
+                    "
+             style="background-image:url('http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">O(∩_∩)O~</span>
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            JavaScript 高级程序设计笔记
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-03-21T19:00:00+08:00">
+	
+		    3月 21, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/JavaScript/">JavaScript</a>
+
+
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>　　JavaScript 高级程序设计笔记</p>
+<a id="more"></a>
+<p>记录下遗忘的知识点</p>
+<hr>
+<h1 id="Part3"><a href="#Part3" class="headerlink" title="Part3"></a>Part3</h1><ul>
+<li><ol>
+<li>ECMAScript5引入严格模式(严格模式下，ECMAScript3中的一些不确定的行为将得到处理，而且对某些不安全的操作也会抛出异常)<br>使用方法：这个脚本顶部添加 ‘use strict’</li>
+</ol>
+</li>
+<li><p>2.五种简单数据类型（基本数据类型）<br>Undefined、Null、Bollean、Number、String<br>一个复杂数据类型：Object</p>
+</li>
+<li><p>3.undefined（声明了变量但未加以初始化）</p>
+</li>
+<li><p>4.null （表示一个空指针）</p>
+</li>
+<li><p>5.boolean 任何数据类型的值调用Boolean()函数，总会返回一个Boolean值，参照下图：</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2901503-6105b59ddbe4f71f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Boolean  "></p>
+<ul>
+<li><p>6.NaN(非数值是一个特殊的数值)表示一个本来要返回数值的操作数未返回数值的情况。<br>特殊点：任何涉及NaN的操作都会返回NaN；NaN与任何数值都不想等，包括他本身。<br>isNaN() ：尝试转换为数值，不能被转换为数值的值返回 true。（<strong>转换数值知识点</strong>）</p>
+</li>
+<li><p>7.ECMAScript 中的所有参数传递的都是值，不可能通过引用传递参数。</p>
+</li>
+<li><p>8.ECMAScript函数不能重载。</p>
+</li>
+</ul>
+<hr>
+<h1 id="Part4"><a href="#Part4" class="headerlink" title="Part4"></a>Part4</h1><ul>
+<li><p>1.基本数据类型是按值访问的，因此可以操作保存在变量中的实际的值。<br>引用类型的值时按引用访问的（JavaScript不允许直接访问内存中的 位置）</p>
+</li>
+<li><p>2.检测基本数据类型时用  typeof 操作符<br>检测引用类型的值时用 instanceof 操作符</p>
+</li>
+<li><p>3.没有块级作用域</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2901503-af281d4396c68a76.png" alt="Paste_Image.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2901503-41d9a2b0223dff69.png" alt="Paste_Image.png"></p>
+<p>查询标识符，从作用域链的前端开始，向上逐级查询与给定名字匹配的标识符。</p>
+<ul>
+<li><p>4.垃圾收集：<br>标记清除：算法的思想是给当前不使用的值加上标记，然后在回收其内存。<br>第一阶段,标记所有的可访问对象.第一阶段叫做标记阶段.<br>第二阶段,垃圾收集算法扫描堆并回收所有的未标记对象.第二阶段叫做收集阶段.<br>引用计数：算法是思想是跟踪记录所有的值被引用的次数。<br>引用计数对循环引用的垃圾回收会出现内存泄漏，而IE的DOM回收机制便是采用引用计数的。IE9+把BOM和DOM对象都转换成真正意义的JavaScript对象。避免两种垃圾收集算法的并存。</p>
+</li>
+<li><p>5.解除变量的引用不仅有助于消除循环引用现象，而且对垃圾收集也有好处。为了确保有效地回收内存，应该及时解除不在使用的全局对象、全局对象属性以及循环引用变量的引用。</p>
+</li>
+</ul>
+<hr>
+<h1 id="Part5-引用类型"><a href="#Part5-引用类型" class="headerlink" title="Part5  引用类型"></a>Part5  引用类型</h1><p>对象是某个特定引用类型的<strong>实例</strong></p>
+<h5 id="1-Object类型"><a href="#1-Object类型" class="headerlink" title="1.Object类型"></a>1.Object类型</h5><p>创建方式：<br>① new操作符后跟Object构造函数<br>②使用对象字面量表示法。</p>
+<h5 id="2-Array类型"><a href="#2-Array类型" class="headerlink" title="2.Array类型"></a>2.Array类型</h5><p>ECMAScript数组的每一项可以保存任何类型的数据。<br>创建方式：<br>①使用Array构造函数  eg： var arr= new Array();<br>②使用数组字面量表示法 eg: var arr=[1,2,’A’];<br>数组最多包含4294967295个项</p>
+<p><strong>2.1检测数组</strong><br>ECMAScript新增 Array.isArray()</p>
+<p><strong>2.2转换方法</strong><br>toString()<br>valueOf()<br>toLocaleString()<br>调用数组的 toString()方法会返回有数组中每个值的字符串形式拼接而成的一个以逗号分隔的字符串。<br>调用数组的 valueOf()方法会返回的还是数组。<br>toLocaleString()不同之处在于，为取到每一项的值，调用的是toLocaleString()方法，而不是toString()方法</p>
+<p>join()方法可以使用不同的分隔符来构建这个字符串。 如，  ||  *</p>
+<p><strong>2.3栈方法</strong>（后进先出）<br>push()  可以接收任意数量的参数，把他们逐个添加到数组末尾。并返回修改后数组的长度。<br>pop()  从数组末尾移除最后一项，减少数组的length值，返回移除的项。</p>
+<p><strong>2.4队列方法</strong>（先进先出）<br>shift() 移除数组中的第一个项并返回该项，同时将数组长度减一。<br>unshift()在数组前端添加任意个项并返回新数组的长度。</p>
+<p><strong>2.5重排序方法</strong><br>reverse() 翻转数组项的顺序</p>
+<p>sort() 方法时按升序排列数组项（调动数组项的toString()转型方法，比较字符串。）<br>arrayObject.sort(sortby)<br>sortby 可选。规定排序顺序。必须是函数。<br>给数值型数组排序时，可以定义排序函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [12,5,8,40];</span><br><span class="line">function sortNumber(a,b)&#123;</span><br><span class="line">   return a - b  //  return b-a 为降序排列</span><br><span class="line">&#125;</span><br><span class="line">arr.sort(sortNumber);</span><br></pre></td></tr></table></figure></p>
+<p>或者 复杂点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var arr = [12,5,8,40];</span><br><span class="line">function compare(value1, value2) &#123;</span><br><span class="line">    if (value1 &lt; value2) &#123;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125; else if (value1 &gt; value2) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">arr.sort(compare);</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.6操作方法</strong><br>concat()<br> 创建当前数组的一个副本，将接收到的参数添加到这个副本的末尾，最后返回新构建的数组，</p>
+<p>slice()<br>arrayObject.slice(start,end)<br>start    必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。<br>end    可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</p>
+<p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。<br>arrayObject.splice(index,howmany,item1,…..,itemX)<br>index    必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。<br>howmany    必需。要删除的项目数量。如果设置为 0，则不会删除项目。<br>item1, …, itemX    可选。向数组添加的新项目。</p>
+<p><strong>2.7位置方法</strong><br>indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。</p>
+<p><strong>2.8迭代方法</strong><br>map()是对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。这个数组的每一项都是在原始数据中的对应项上运行传入函数的结果<br>filter()是对数组中的每一项运行给定函数，返回该函数会返回true的项所组成的数组。它利用指定的函数确定是否在返回的数组中包含某一项<br>every()是对数组中的每一项运行给定函数，如果该函数对每一项都返回true，则返回true。<br>some()是对数组中的每一项运行给定函数，如果该函数对任一项返回true，则返回true。<br>forEach() 是多数组中的每一项运行给定函数，这个方法没有返回值。它只是对数组中的每一项运行传入的函数，没有返回值。本质上与使用for循环迭代数组一样。</p>
+<p><strong>2.9缩小方法</strong><br>reduce() reduceRight()<br>迭代数组的所有项，然后构建一个最终返回的值。</p>
+<h5 id="3-Date类型"><a href="#3-Date类型" class="headerlink" title="3.Date类型"></a>3.Date类型</h5><h5 id="4-RegExp类型"><a href="#4-RegExp类型" class="headerlink" title="4.RegExp类型"></a>4.RegExp类型</h5><h5 id="5-Function类型"><a href="#5-Function类型" class="headerlink" title="5.Function类型"></a>5.Function类型</h5><p>函数是对象，函数名是指针。</p>
+<p><strong>5.1 没有重载（两个同名函数，后面的会覆盖前面的函数）</strong></p>
+<p><strong>5.2 函数声明与函数表达式</strong><br>解析器会率先读取函数声明，并使其在执行任何代码前可用，<br>函数表达式，会在解析器执行到它所在是代码行，才会真正被解释执行。</p>
+<p><strong>5.3作为值的函数</strong></p>
+<p><strong>5.4函数内部属性</strong><br>特殊对象：arguments 和 this<br>用例：阶乘<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function factorial(num) &#123;</span><br><span class="line">      if (num &lt;= 1) &#123;</span><br><span class="line">          return 1;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">          return num * arguments.callee(num - 1);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>5.5函数属性和方法</strong><br>每个函数都包含两个属性 length 和 prototype<br>length 表示函数希望接受的命名参数的个数。<br>prototype是保存他们所有实例方法的真实所在。</p>
+<h4 id="6基本包装类型"><a href="#6基本包装类型" class="headerlink" title="6基本包装类型"></a>6基本包装类型</h4><p>引用类型与基本包装类型的主要区别就是对象的生存期。</p>
+<p>基本包装类型，也是一种引用类型。基本包装类型是对基本数据类型的封装，封装后即具有基本类型的功能，也有各自的特殊行为（方法）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">基本包装类型需要一个new来创建。请看下面的例子：</span><br><span class="line">1.字面量写法：var box = &apos;Mr. Lee&apos;;//字面量</span><br><span class="line">box.name = &apos;Lee&apos;;//无效属性</span><br><span class="line">box.age = function () &#123;//无效方法</span><br><span class="line">return 100;</span><br><span class="line">&#125;;</span><br><span class="line">alert(box);//Mr. Lee</span><br><span class="line">alert(box.substring(2));//. Lee</span><br><span class="line">alert(typeof box);//string</span><br><span class="line">alert(box.name);//undefined</span><br><span class="line">alert(box.age());//错误</span><br><span class="line"></span><br><span class="line">2.new 运算符写法：var box = new String(&apos;Mr. Lee&apos;);//new 运算符</span><br><span class="line">box.name = &apos;Lee&apos;;//有效属性</span><br><span class="line">box.age = function () &#123;//有效方法</span><br><span class="line">return 100;</span><br><span class="line">&#125;;</span><br><span class="line">alert(box);//Mr. Lee</span><br><span class="line">alert(box.substring(2));//. Lee</span><br><span class="line">alert(typeof box);//object</span><br><span class="line">alert(box.name);//Lee</span><br><span class="line">alert(box.age());//100</span><br></pre></td></tr></table></figure>
+<p><strong>6.1Boolean类型</strong><br><strong>6.2Number类型</strong><br><strong>6.3String类型</strong></p>
+<h4 id="7-单体内置对象"><a href="#7-单体内置对象" class="headerlink" title="7.单体内置对象"></a>7.单体内置对象</h4><p>Global对象<br>Math对象</p>
+<hr>
+<h1 id="Part7"><a href="#Part7" class="headerlink" title="Part7"></a>Part7</h1><ul>
+<li>1.递归：是在一个函数通过名字调用自身的情况下构成的</li>
+<li>2.闭包：是指有权访问另一个函数作用域中的变量的函数</li>
+</ul>
+<hr>
+<h1 id="Part8-BOM"><a href="#Part8-BOM" class="headerlink" title="Part8  BOM"></a>Part8  BOM</h1><ul>
+<li><p>1.BOM的核心对象是window，他表示浏览器的一个实例。</p>
+</li>
+<li><p>2.全局变量 不能通过delete操作符删除，而直接在window对象上的定义的属性可以。</p>
+</li>
+<li><ol>
+<li>JavaScript是单线程语言，但他允许通过设置超时值和间歇时间值来调度代码在特定的时刻执行。<br>超时调用： setTimeout();<br>间歇调用： setInterval();</li>
+</ol>
+</li>
+<li><p>4.系统对话框<br>alert()<br>confirm()<br>prompt()</p>
+</li>
+</ul>
+<hr>
+<h1 id="Part9-客户端检测"><a href="#Part9-客户端检测" class="headerlink" title="Part9 客户端检测"></a>Part9 客户端检测</h1><ul>
+<li>1.客户端检测是JavaScript开发中最具争议的一个话题。经常使用：<br>能力检测：在编写代码之前先检测特定浏览器的能力。<br>怪癖检测：实际上是浏览器实现中存在的bug。（无法精确检测特定的浏览器和版本）<br>用户代理检测：通过检测用户代理字符串来识别浏览器。（万不得已才使用）</li>
+</ul>
+<hr>
+<h1 id="Part10-DOM"><a href="#Part10-DOM" class="headerlink" title="Part10 DOM"></a>Part10 DOM</h1><ul>
+<li>最基本的节点类型时Node，用于抽象地表示文档中一个独立的部分，所有其他类型都继承自Node<br>*jQuery 的核心就是通过CSS选择符查询DOM文档取得元素的引用。从而抛开了getElementById()和getElementByTagName()</li>
+</ul>
+<hr>
+<h1 id="Part13"><a href="#Part13" class="headerlink" title="Part13"></a>Part13</h1><ul>
+<li>1.事件流描述的是从页面中接收事件的顺序。</li>
+<li>2.IE的事件流叫做事件冒泡。（所有现代浏览器都支持事件冒泡）</li>
+<li>3.事件捕获。相反，document对象首先接收到click事件，然后事件沿着DOM书依次向下。直到事件的实际目标。</li>
+<li>4.DOM事件流。包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段。</li>
+<li>5.事件处理程序：<br>HTML事件处理程序<br>DOM0级事件处理程序<br>DOM2级事件处理程序<br>IE级事件处理程序<br>跨浏览器的事件处理程序</li>
+<li>6.建立在事件冒泡机制智商的事件委托技术，可以有效的减少事件处理程序的数量。</li>
+<li>7.建议在浏览器卸载页面之前移除页面中的所有事件处理程序。</li>
+</ul>
+<hr>
+<h1 id="Part23-客户端存储"><a href="#Part23-客户端存储" class="headerlink" title="Part23 客户端存储"></a>Part23 客户端存储</h1><ul>
+<li>cookie 的限制使其可以存储少量的数据。</li>
+<li>Web Storage定义了两种存储数据的对象，sessionStorage 和localStorage<br>前者严格用于在一个浏览器会话中存储数据，因为数据在浏览器关闭后会立即删除。<br>后者用于跨会话持久化数据并遵循跨域安全策略。</li>
+<li>IndexedDB是一种类似SQL数据库的结构化数据存储机制。但他的数据不是保存在表中，而是保存在对象存储空间中。</li>
+</ul>
+<hr>
+<h1 id="Part25-新兴API"><a href="#Part25-新兴API" class="headerlink" title="Part25 新兴API"></a>Part25 新兴API</h1><ul>
+<li>requestAnimationFrame()： 优化JS动画API，能够在动画运行期间发出信号，是浏览器能都自动优化屏幕重绘操作</li>
+<li>Page VIsibility API ： 让开发者知道用户什么时候正在看着页面，而什么时候页面是隐藏的。</li>
+<li>Geolocation API ： 在得到许可的情况下，可以确定用户所在的位置。</li>
+<li>File API ：可以读取文件内容。用于显示、处理、上传。</li>
+<li>Web计时： 给出页面加载和渲染过程的很多信息。对性能优化非常有价值。</li>
+<li>Web Workers ：可以运行异步JavaScript代码，避免阻塞用户界面。</li>
+</ul>
+<hr>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/JavaScript/">JavaScript</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/27/前端/jQuery 整理/"  data-tooltip="jQuery 整理">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/20/前端/JavaScript DOM/" data-tooltip="JavaScript DOM">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2017/03/21/前端/JavaScript 高级程序设计笔记/"
+     data-title="JavaScript 高级程序设计笔记" data-url="https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 小学生. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/27/前端/jQuery 整理/"  data-tooltip="jQuery 整理">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/03/20/前端/JavaScript DOM/" data-tooltip="JavaScript DOM">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/03/21/前端/JavaScript 高级程序设计笔记/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">小学生</h4>
+        
+            <div id="about-card-bio"><p>海纳百川，有容乃大</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>程序猿</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                china
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/icon2.gif" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <h3 class="media-heading">处女作一定要短</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2014年7月1日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h3 id="从前有个太监…"><a href="#从前有个太监…" class="headerlink" title="从前有个太监…"></a>从前有个太监…</h3></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <h3 class="media-heading">线性表</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <h3 class="media-heading">数据结构基础</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <h3 class="media-heading">查找</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <h3 class="media-heading">栈与队列</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <h3 class="media-heading">排序</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <h3 class="media-heading">算法</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <h3 class="media-heading">图</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <h3 class="media-heading">串</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <h3 class="media-heading">树</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 150 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'wlq'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>

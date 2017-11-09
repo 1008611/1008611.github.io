@@ -1,0 +1,834 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="学海无涯...">
+    <title>代码大全2----读书笔记1 - 学海无涯...</title>
+    <meta name="author" content="小学生">
+    
+        <meta name="keywords" content="javascript,hexo">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="代码大全">
+<meta name="keywords" content="javascript,hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="代码大全2----读书笔记1">
+<meta property="og:url" content="https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/index.html">
+<meta property="og:site_name" content="学海无涯...">
+<meta property="og:description" content="代码大全">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-a8639ebc4b7cc895.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-e4c356eeccdbbe48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-48d1e04d35fa1ac3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-27b1bc21632646dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2901503-027d41830df2ef40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-01T01:51:15.581Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="代码大全2----读书笔记1">
+<meta name="twitter:description" content="代码大全">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2901503-a8639ebc4b7cc895.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://1008611.github.io/assets/images/icon3.gif"/>
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg" />
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">学海无涯...</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">小学生</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>海纳百川，有容乃大</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/1008611" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://stackoverflow.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-center
+                    "
+             style="background-image:url('http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">O(∩_∩)O~</span>
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            代码大全2----读书笔记1
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-02-25T09:00:00+08:00">
+	
+		    2月 25, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Knockout/">Knockout</a>
+
+
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>　　代码大全</p>
+<a id="more"></a>
+<p>##Part1  软件构建<br>　　软件开发的主要流程：问题定义-〉需求分析-〉规划构建-〉架构（概要设计）-〉详细设计-〉编码与调试-〉单元测试-〉集成测试-〉系统测试-〉交付或发布-〉软件维护</p>
+<p>　　各个过程与软件构建的关系如下图：<br><img src="http://upload-images.jianshu.io/upload_images/2901503-a8639ebc4b7cc895.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
+<h4 id="为什么构建活动如此重要："><a href="#为什么构建活动如此重要：" class="headerlink" title="为什么构建活动如此重要："></a>为什么构建活动如此重要：</h4><p>①构建活动是软件开发的主要组成部分。<br>②构建活动是软件开发中的核心活动。<br>③把主要精力集中于构建活动，可以大大提高程序员的生产率。<br>④构建活动的产物—-源代码—-往往是对软件的唯一精确描述。<br>⑤构建活动是唯一一项确保会完成的工作。</p>
+<hr>
+<p>##Part2  用隐喻来更充分地理解软件开发<br>　　隐喻是启示而不是算法，隐喻把软件开发过程与其他你熟悉的活动联系在一起，帮助你更好地理解。</p>
+<h4 id="常见的软件隐喻："><a href="#常见的软件隐喻：" class="headerlink" title="常见的软件隐喻："></a>常见的软件隐喻：</h4><p>①写作代码：就像写信，不需要正规的做计划，想到什么写出来就是了。不行就丢掉。<br>②配置系统：逐步的设计完善系统，将麻烦减到最小，缺点是暗示了无法对开发软件的过程和方式进行任何直接的控制。<br>③系统生长：增量式开发，先做出软件系统的骨架。一个简单、但是可以运行的版本，然后逐步完成一个完全可以工作的系统。<br>④建造软件：软件开发就像建筑一样，需要计划，前期准备和执行。<br>⑤智慧工具箱：人们在多年的开发过程中积累了大量的技术、技巧和诀窍。<strong>技术并不是规矩，他只是分析工具</strong>。<br>⑥组合各种隐喻。</p>
+<hr>
+<h2 id="Part3-三思而后行：准备工作"><a href="#Part3-三思而后行：准备工作" class="headerlink" title="Part3  三思而后行：准备工作"></a>Part3  三思而后行：准备工作</h2><p>　　主要准备工作倾向于集中改进需求分析和项目规划。<br>　　<em>番外语录：（虽然经济景气程度时高时低，但是优秀的程序员永远是紧缺的。人生苦短，当有大量更好的选择摆在你面前的时候，在一个荒蛮的软件企业中工作是不明智的）</em><br>　　<em>程序员是软件食物链的最后一环。架构师吃掉需求，设计师吃掉架构，而程序员则消化设计</em></p>
+<h4 id="修复缺陷的成本："><a href="#修复缺陷的成本：" class="headerlink" title="修复缺陷的成本："></a>修复缺陷的成本：</h4><p><img src="http://upload-images.jianshu.io/upload_images/2901503-e4c356eeccdbbe48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
+<p>　　三种常见的软件项目种类，及其典型的良好实践</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2901503-48d1e04d35fa1ac3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/2901503-27b1bc21632646dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
+<h4 id="序列式开发法与迭代式开发法选择"><a href="#序列式开发法与迭代式开发法选择" class="headerlink" title="序列式开发法与迭代式开发法选择"></a>序列式开发法与迭代式开发法选择</h4><p>①序列式开发法适用下列环境：<br>　　需求相当稳定。<br>　　设计直接了当，而且理解透彻。<br>　　开发团队对于这一应用领域非常熟悉。<br>　　项目风险很小。<br>　　“长期可预测性”很重要。<br>　　后期改变需求、设计和编码的的代价很可能较昂贵。</p>
+<p>②迭代式开发法适用下列环境：<br>　　需求并没有被理解透彻，或者出于其他理由你认为它是不稳定的。<br>　　设计很复杂，或者有挑战性，或者两者兼具。<br>　　开发团队对于这一应用领域不熟悉。<br>　　项目包含许多风险。<br>　　“长期可预测性”不重要。<br>　　后期改变需求、设计和编码的代价很可能较低。</p>
+<h4 id="为什么要有正确的需求"><a href="#为什么要有正确的需求" class="headerlink" title="为什么要有正确的需求"></a>为什么要有正确的需求</h4><p>　　明确的需求有助于确保是用户（而不是程序员）驾驭系统的功能<br>　　明确的需求有助于避免争论。<br>　　有助于减少开始编程开发之后的系统变更情况。</p>
+<h4 id="稳定的需求是软件开发的圣杯。"><a href="#稳定的需求是软件开发的圣杯。" class="headerlink" title="稳定的需求是软件开发的圣杯。"></a>稳定的需求是软件开发的圣杯。</h4><h4 id="在构建期间处理需求变更"><a href="#在构建期间处理需求变更" class="headerlink" title="在构建期间处理需求变更"></a>在构建期间处理需求变更</h4><p>　　（对比需求核对表）评估需求的质量。<br>　　确保每一个人都知道需求变更的代价。<br>　　建立一套变更控制程序。<br>　　使用能适应变更的开发方法。<br>　　放弃这个项目。（需求糟糕不稳定，以上都不奏效）<br>　　注意项目的商业案例。</p>
+<h3 id="需求核对表"><a href="#需求核对表" class="headerlink" title="需求核对表"></a>需求核对表</h3><p>　　针对功能需求：<br>是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？<br>是否详细定义了系统的全部输出，包括目的地、精度、取值范围、出现频率、格式等？<br>是否详细定义了所有输出格式（Web页面、报表，等等）？<br>是否详细定义了所有硬件及软件的外部接口？<br>是否详细定义了全部外部通信接口，包括握手协议、纠错协议、通信协议等？<br>是否列出了用户想要做的全部事情？<br>是否详细定义了每个任务所用的数据，以及每个任务得到的数据？</p>
+<p>　　针对非功能需求（质量需求）：<br>是否为全部必要的操作，从用户的视角，详细描述了期望响应时间？<br>是否详细描述了其他与计时有关的考虑，例如处理时间、数据传输率、系统吞吐量？<br>是否详细定义了安全级别？<br>是否详细定义了可靠性，包括软件失灵的后果、发生故障时需要保护的至关重要的信息、错误检测与恢复的策略等？<br>是否详细定义了机器内存和剩余磁盘空间的最小值？<br>是否详细定义了系统的可维护性，包括适应特定功能的变更、操作环境的变更、与其他软件的接口的变更能力？<br>是否包含对“成功”的定义？“失败”的定义呢？</p>
+<p>　　需求的质量：<br>需求使用用户的语言书写的吗？用户也这么认为吗？<br>每条需求都不与其他需求冲突吗？<br>是否详细定义了相互竞争的特性之间的权衡——例如，健壮性与正确性之间的权衡？<br>是否避免在需求中规定设计（方案）？<br>需求是否在详细程度上保持相当一致的水平？有些需求应该更详细地描述吗？有些需求应该更粗略地描述吗？<br>需求是否足够清晰，即使转交给一个独立的小组去构建，他们也能理解吗？开发者也这么想吗？<br>每个条款都与待解决的问题及其解决方案相关吗？能从每个条款上溯到他在问题与中对应的根源吗？<br>是否每条需求都是可测试的？是否可能进行独立的测试，以检验满不满足各项需求？<br>是否详细描述了所有可能的对需求的改动，包括各项改动的可能性？</p>
+<p>　　需求的完备性：<br>对于在开始开发之前无法获得的信息，是否详细描述了信息不完全的区域？<br>需求的完备度是否能达到这种程度：如果产品满足所有需求，那么它就是可接受的？<br>你对全部需求都感到很舒服吗？你是否已经去掉了那些不可能实现的需求——那些只是为了安抚客户和老板的东西？</p>
+<h4 id="架构的典型组成部分"><a href="#架构的典型组成部分" class="headerlink" title="架构的典型组成部分"></a>架构的典型组成部分</h4><p>程序组织<br>主要的类<br>数据设计<br>业务规则<br>用户界面设计<br>资源管理<br>安全性<br>性能<br>可伸缩性<br>互用性<br>国际化\本地化<br>输入输出<br>错误处理<br>容错性<br>架构的可行性<br>过度工程<br>关于买还是造的决策<br>关于复用性的决策<br>变更策略<br>架构的总体质量</p>
+<h4 id="架构质量的核对表"><a href="#架构质量的核对表" class="headerlink" title="架构质量的核对表"></a>架构质量的核对表</h4><p>　　针对个架构主题<br>程序的整体组织结构是否清晰？是否包含一个良好的架构全局观（及其理由）？<br>是否明确定义了主要的构造块（包括每个构造块的职责范围及其他构造块的接口）？<br>是否明显涵盖了“需求”中列出的所有功能（每个功能对应的构造块不太多也不太少）？<br>是否描述并论证了那些最关键的类？<br>是否描述并论证了数据设计？<br>是否详细定义了数据库的组织结构和内容？<br>是否指出了所用的关键的业务规则，并描述其对系统的影响？<br>是否描述了用户界面设计的策略？<br>是否将用户界面模块化，使界面的变更不会影响程序其余部分？<br>是否描述并论证了处理I/O的策略？<br>是否估算了稀缺资源（如现程、数据库连接、句柄、网络带宽等）的使用量，是否描<br>述并论证了资源管理的策略？<br>是否描述了架构的安全需求？<br>架构是否为每个类、每个子系统、或每个功能域（functionality area）提出空间与时间预算？<br>架构是否描述了如何达到可伸缩性？<br>架构是否关注互操作性？<br>是否描述了国际化/本地化的策略？<br>是否提供了一套内聚的错误处理策略？<br>是否规定了容错的办法（如果需要）？<br>是否证实了系统各个部分的技术可行性？<br>是否详细描述了过度工程的方法？<br>是否包含了必要的“买 vs. 造”的决策？<br>架构是否描述了如何加工被复用的代码，使之符合其他架构目标？<br>是否将架构设计得能够适应很可能出现的变更？</p>
+<p>　　架构的总体质量<br>架构是否解决了全部需求？<br>有没有哪个部分是“过度设计”或“欠设计”？<br>整个架构是否在概念上协调一致？<br>顶层设计是否独立于用作实现它的机器和语言？<br>是否说明了所有主要的决策的动机？</p>
+<hr>
+<p>第二部分  创建高质量的代码</p>
+<hr>
+<h2 id="Part4-关键的构建决策"><a href="#Part4-关键的构建决策" class="headerlink" title="Part4  关键的构建决策"></a>Part4  关键的构建决策</h2><h4 id="选择编程语言"><a href="#选择编程语言" class="headerlink" title="选择编程语言"></a>选择编程语言</h4><hr>
+<h2 id="Part5-软件构建中的设计"><a href="#Part5-软件构建中的设计" class="headerlink" title="Part5 软件构建中的设计"></a>Part5 软件构建中的设计</h2><p>####理想的设计特征</p>
+<p>最小的复杂度（Minimal complexity）：设计的首要目标是让复杂度最小。要避免“聪明的”设计，因为“聪明的”设计常常都是难于理解的。应该做出简单且易于理解的设计。如果你的设计方案不能让你在专注于程序的一部分时安心地忽视其他部分的话，这一设计就没有什么作用了。</p>
+<p>易于维护（Ease of maintenance）：意味着在设计时为做维护工作的程序员着想。请时刻想着维护程序员可能会就你写的代码而提出的问题。把这些程序员当成你的听众，进而设计出能自解释的系统来。</p>
+<p>松散耦合（loose coupling）：意味着在设计时让程序的各个组成部分之间关联最小。通过应用类接口中的合理抽象、封装性及信息隐藏等原则，设计出相互关联尽可能最少的类。减少关联也就减少了集成、测试与维护工作量。</p>
+<p>可扩展性（extensibility）：是说你能增强系统的功能而无须破坏其底层结构。你可以改动系统的某一部分而不会影响到其他部分。越是可能发生的改动，越不会给系统造成什么破坏。</p>
+<p>可重用性（reusability）：意味着所设计的系统的组成部分能在其他系统中重复使用。</p>
+<p>高扇入（high fan-in）：是说让大量的类使用某个给定的类。这意味着设计出的系统很好地利用了在较低层次上的工具类（utility classes）。</p>
+<p>低扇出（low fan-out）：是说让一个类里少量或适中地使用其他的类。高扇出（超过约7个）说明一个类使用大量其他的类，因此可能变得过于复杂。</p>
+<p>可移植性（portability）：设计出的系统应该很方便地移植到其他环境中。</p>
+<p>精简性（cleanness）：设计出的系统没有多余的部分。任何多余的代码也需要开发、Review和测试，并且修改了其他代码后还要重新考虑这部分。</p>
+<p>层次性（stratification）：意味着尽量保持系统各个分解层的层次性，是你能在任意的层面上观察系统，并得到某种具有一致性的看法。</p>
+<p>标准技术（Standard techniques）：要尽量用标准化的、常用的方法，让整个系统给人一种熟悉的感觉。</p>
+<h4 id="设计的层次"><a href="#设计的层次" class="headerlink" title="设计的层次"></a>设计的层次</h4><p><img src="http://upload-images.jianshu.io/upload_images/2901503-027d41830df2ef40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="设计的层次"><br>常用的子系统：业务规则、用户界面、数据库访问、对系统的依赖性</p>
+<p>####设计构造块：启发式方法<br>寻找现实世界的对象<br>形成一致的抽象<br>封装实现细节<br>在可能的情况下继承<br>信息隐藏<br>找出容易改变的区域<br>保存松散耦合<br>探寻通用的设计模式</p>
+<p><a href="http://blog.csdn.net/byxdaz/article/details/4524415" target="_blank" rel="external"></a></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Knockout/">Knockout</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/25/前端/Knockout 学习/"  data-tooltip="Knockout 学习ing">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/18/随笔/一人我饮酒醉  东北篇/" data-tooltip="一人我饮酒醉  东北篇">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2017/02/25/读书笔记/代码大全2读书笔记/"
+     data-title="代码大全2----读书笔记1" data-url="https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 小学生. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/25/前端/Knockout 学习/"  data-tooltip="Knockout 学习ing">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/18/随笔/一人我饮酒醉  东北篇/" data-tooltip="一人我饮酒醉  东北篇">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/25/读书笔记/代码大全2读书笔记/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">小学生</h4>
+        
+            <div id="about-card-bio"><p>海纳百川，有容乃大</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>程序猿</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                china
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/icon2.gif" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <h3 class="media-heading">处女作一定要短</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2014年7月1日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h3 id="从前有个太监…"><a href="#从前有个太监…" class="headerlink" title="从前有个太监…"></a>从前有个太监…</h3></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <h3 class="media-heading">线性表</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <h3 class="media-heading">数据结构基础</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <h3 class="media-heading">查找</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <h3 class="media-heading">栈与队列</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <h3 class="media-heading">排序</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <h3 class="media-heading">算法</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <h3 class="media-heading">图</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <h3 class="media-heading">串</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <h3 class="media-heading">树</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 150 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'wlq'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>

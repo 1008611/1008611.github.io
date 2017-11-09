@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="学海无涯...">
+    <title>vue-quill-editor custom button base64 to imgUrl - 学海无涯...</title>
+    <meta name="author" content="小学生">
+    
+        <meta name="keywords" content="javascript,hexo">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="vue-quill-editor custom button base64 to imgUrl">
+<meta name="keywords" content="javascript,hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="vue-quill-editor custom button base64 to imgUrl">
+<meta property="og:url" content="https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/index.html">
+<meta property="og:site_name" content="学海无涯...">
+<meta property="og:description" content="vue-quill-editor custom button base64 to imgUrl">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-07-24T09:05:56.450Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-quill-editor custom button base64 to imgUrl">
+<meta name="twitter:description" content="vue-quill-editor custom button base64 to imgUrl">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://1008611.github.io/assets/images/icon3.gif"/>
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg" />
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">学海无涯...</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">小学生</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>海纳百川，有容乃大</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/1008611" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://stackoverflow.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-center
+                    "
+             style="background-image:url('http://oims9p4rv.bkt.clouddn.com/wallpaper_5221902.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">O(∩_∩)O~</span>
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            vue-quill-editor custom button base64 to imgUrl
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-06-16T09:00:00+08:00">
+	
+		    6月 16, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/JavaScript/">JavaScript</a>
+
+
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>　　vue-quill-editor custom button base64 to imgUrl</p>
+<a id="more"></a>
+<p>　　The vue-quill-editor rich text editor is used in the project<br>Brief introduction:<br>　　Quill based, rich text editor for Vue2 supports server-side rendering and single page applications.<br>Demo Page<br>Sum up:<br>　　1. in general, simple and easy to use.<br>　　2. you can customize the Option toolbar looks good to use</p>
+<p>　　But the pictures used in the project were uploaded. Use this plugin directly. There was no problem. But the backstage couldn’t stand it, and the pictures were encoded by base64. Background pictures are limited. Helpless, just want to solve the problem. Fortunately, the background provides an interface, the picture to URL, so good, first the picture to URL, in the rich text editor inside it is not OK?.</p>
+<p>　　The reason is so simple, practice is really another matter.</p>
+<h4 id="容我装逼一把，哈哈，中文用户还是看下面吧。"><a href="#容我装逼一把，哈哈，中文用户还是看下面吧。" class="headerlink" title="容我装逼一把，哈哈，中文用户还是看下面吧。"></a>容我装逼一把，哈哈，中文用户还是看下面吧。</h4><p>　　项目中使用了 <strong><a href="https://github.com/surmon-china/vue-quill-editor" target="_blank" rel="external">vue-quill-editor</a></strong> 富文本编辑器<br>简介：<br>　　基于Quill、适用于Vue2的富文本编辑器，支持服务端渲染和单页应用。<br><a href="https://surmon-china.github.io/vue-quill-editor/" target="_blank" rel="external">Demo Page</a><br>总结：<br>　　1.总的来说简洁好用。<br>　　2.可以自定义Option toolbar貌似很好用的样子</p>
+<p>　　但是项目中使用到了图片上传。直接使用这个插件。完全没问题。但是后台受不了了，传过去的图片是base64编码。后台图片做了限制。无奈只好想办法解决呗。好在后台提供了个接口，将图片转为URL，这样好啊，先把图片转为URL，在放到富文本编辑器里面不就行了吗。</p>
+<p>　　道理是这么简单，实践确是另一回事。</p>
+<h3 id="问题一-怎么添加自定义的button。"><a href="#问题一-怎么添加自定义的button。" class="headerlink" title="问题一  怎么添加自定义的button。"></a>问题一  怎么添加自定义的button。</h3><p>　　demo中也提供了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot; @click=&quot;customButtonClick&quot;&gt;img&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
+<p>什么 img 太丑了，那就是用字符图标(Glyphicons 字体图标)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot; @click=&quot;customButtonClick&quot;&gt;&lt;i class=&quot;glyphicon glyphicon glyphicon-picture&quot;&gt;&lt;/i&gt;&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="问题二-怎么打开file-选择图片。"><a href="#问题二-怎么打开file-选择图片。" class="headerlink" title="问题二  怎么打开file 选择图片。"></a>问题二  怎么打开file 选择图片。</h3><p>　　这个一开始想着是自定义个  <input type="file" class="ql-image"><br>　　图标太丑。<br>　　class=”ql-image” 放在上面button中 虽然好看，可以打开获取图片，但是还是base64不走自定义方法。放在input中没卵用。</p>
+<p>　　该怎么实现那，其实也不难<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;file&quot; class=&quot;custom-input&quot; @change=&apos;upload&apos; style=&apos;display: none !important;&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>　　直接放个隐形的input就解决了。貌似很牛逼的样子</p>
+<p>　　然后在 upload中写方法 调接口实现 Base64到url 的完美过度</p>
+<p>##最后才是重点：<br>——————————————分割线——————————————————-<br>以下仅做参考</p>
+<h3 id="问题三-获取到了imgUrl后怎么插入到文档中。"><a href="#问题三-获取到了imgUrl后怎么插入到文档中。" class="headerlink" title="问题三 获取到了imgUrl后怎么插入到文档中。"></a>问题三 获取到了imgUrl后怎么插入到文档中。</h3><p>　　<a href="https://segmentfault.com/q/1010000008951906" target="_blank" rel="external">最开始参考的是这位仁兄的回答</a><br>　　但是放到customButton中是获取不到 this.$refs.myTextEditor.quillEditor更别说.getSelection();这个方法了。<br>　　因为自定义的按钮是获取不到 quill 的。<br>　　这个方法放到<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   onEditorChange(&#123;editor, html, text&#125;) &#123;</span><br><span class="line">//        console.log(&apos;editor change!&apos;, editor)</span><br><span class="line">         console.log(&apos;editor change!&apos;, editor.getSelection())</span><br><span class="line">      &#125;,</span><br><span class="line">这样是好用的</span><br></pre></td></tr></table></figure></p>
+<p>　　那我该怎么办那  马丹 自己太机智了，有点投机取巧的做法</p>
+<h5 id="放大招了直接上代码"><a href="#放大招了直接上代码" class="headerlink" title="放大招了直接上代码"></a>放大招了直接上代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;quill-editor ref=&quot;myTextEditor&quot;</span><br><span class="line">                          v-model=&quot;content&quot;</span><br><span class="line">                          :options=&quot;editorOption&quot;</span><br><span class="line">                          @focus=&quot;onEditorFocus($event)&quot;</span><br><span class="line">                          @ready=&quot;onEditorReady($event)&quot;</span><br><span class="line">            &gt;</span><br><span class="line">              &lt;div id=&quot;toolbar&quot; slot=&quot;toolbar&quot;&gt;</span><br><span class="line">                &lt;button class=&quot;ql-bold&quot;&gt;Bold&lt;/button&gt;</span><br><span class="line">                &lt;button class=&quot;ql-italic&quot;&gt;Italic&lt;/button&gt;</span><br><span class="line">                &lt;select class=&quot;ql-size&quot;&gt;</span><br><span class="line">                  &lt;option value=&quot;small&quot;&gt;&lt;/option&gt;</span><br><span class="line">                  &lt;option selected&gt;&lt;/option&gt;</span><br><span class="line">                  &lt;option value=&quot;large&quot;&gt;&lt;/option&gt;</span><br><span class="line">                  &lt;option value=&quot;huge&quot;&gt;&lt;/option&gt;</span><br><span class="line">                &lt;/select&gt;</span><br><span class="line">                &lt;!-- Add subscript and superscript buttons --&gt;</span><br><span class="line">                &lt;!--&lt;button type=&quot;button&quot; class=&quot;ql-image&quot;&gt;&lt;/button&gt;--&gt;</span><br><span class="line">                &lt;button type=&quot;button&quot; @click=&quot;customButtonClick&quot;&gt;img&lt;/button&gt;</span><br><span class="line">                &lt;input type=&quot;file&quot; class=&quot;custom-input&quot; @change=&apos;upload&apos; style=&apos;display: none !important;&apos;&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">            &lt;/quill-editor&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">    data()&#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        length: &apos;&apos;,</span><br><span class="line">        editor: &#123;&#125;,</span><br><span class="line">        editorOption: &#123;</span><br><span class="line">          modules: &#123;</span><br><span class="line">          //  imageImport: true,</span><br><span class="line">          //  imageResize: &#123;</span><br><span class="line">          //    displaySize: true</span><br><span class="line">         //   &#125;,</span><br><span class="line">            toolbar: &apos;#toolbar&apos;,</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  methods: &#123;</span><br><span class="line">      onEditorFocus(editor) &#123;</span><br><span class="line">        this.editor = editor   //当content获取到焦点的时候就 存储editor</span><br><span class="line">      &#125;,</span><br><span class="line">      onEditorReady(editor) &#123;</span><br><span class="line">        this.editor = editor //当quill实例化完先 存储editor</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      customButtonClick()&#123;</span><br><span class="line">        var range</span><br><span class="line">        if (this.editor.getSelection() != null) &#123;</span><br><span class="line">          range = this.editor.getSelection()</span><br><span class="line">          this.length = range.index  //content获取到焦点，计算光标所在位置，目的为了在该位置插入img</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          this.length = this.content.length  //content没有获取到焦点时候 目的是为了在content末尾插入img</span><br><span class="line">        &#125;</span><br><span class="line">        this.$el.querySelector(&apos;.custom-input&apos;).click();   //打开file 选择图片</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   upload(event)&#123;</span><br><span class="line">        var reader = new FileReader();</span><br><span class="line">        var img1 = event.target.files[0];</span><br><span class="line">        reader.readAsDataURL(img1);</span><br><span class="line">        var that = this;</span><br><span class="line">        reader.onloadend = function () &#123;</span><br><span class="line">          //上传图片</span><br><span class="line">          that.pushImg(reader.result, 1)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">   pushImg(base64, type)&#123;</span><br><span class="line">        let self = this</span><br><span class="line">        var json = &#123;data: [&#123;id: 0, content: base64&#125;]&#125;</span><br><span class="line">        api.pushImgToGeturl(json).then(function (res) &#123; //这一块可以忽略知识调接口获取到 imgurl</span><br><span class="line">          if (res.data.success) &#123;</span><br><span class="line">              self.contentImg = res.data.data[0].url.url    //获取到了图片的URL</span><br><span class="line">              console.log(self.contentImg)</span><br><span class="line">              self.editor.insertEmbed(self.length, &apos;image&apos;, self.contentImg); // ★这里才是重点★ 插入到content中</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完事。<br>有什么问题可以共同探讨。<br>或者有更好的方法，请告知，谢了。知识在于分享</p>
+<p>最后翻阅了 那么多issues<br>最大的感触是，英语是硬伤啊，学好英语是编程的基础啊。</p>
+<p>——————————————分割线——————————————————-</p>
+<h2 id="这才是重点中的重点"><a href="#这才是重点中的重点" class="headerlink" title="这才是重点中的重点"></a>这才是重点中的重点</h2><p>这个问题GitHub上已经做了修改。<br>所以说以上代码就不用那么繁琐了。仅做参考就行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    computed: &#123;</span><br><span class="line">      editor() &#123;</span><br><span class="line">        return this.$refs.myTextEditor.quill</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">//应该是quill，而非quillEditor</span><br></pre></td></tr></table></figure></p>
+<p>这样就可以在 customButtonClick中获取到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">customButtonClick()&#123;</span><br><span class="line">  console.log(this.editor)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p>感谢@<a href="http://www.jianshu.com/u/21b45b670c48" target="_blank" rel="external">上善若水_3cd7</a>的提醒。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var range = self.editor.getSelection(true);</span><br><span class="line">var  length = range.index</span><br><span class="line">self.editor.insertEmbed(length, &apos;image&apos;, self.contentImg);</span><br></pre></td></tr></table></figure></p>
+<p>这样就不需要土办法了[捂脸]。直接在文中添加图片。而不需判断range.index</p>
+<p>ok 感谢各位大神</p>
+<p> 路漫漫其修远兮吾将上下而求索的出处</p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/JavaScript/">JavaScript</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/19/前端/JavaScript作用域/"  data-tooltip="JavaScript作用域">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/14/前端/vue2 项目开发使用到的东东/" data-tooltip="vue2 项目开发使用到的东东">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/"
+     data-title="vue-quill-editor custom button base64 to imgUrl" data-url="https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 小学生. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/19/前端/JavaScript作用域/"  data-tooltip="JavaScript作用域">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/14/前端/vue2 项目开发使用到的东东/" data-tooltip="vue2 项目开发使用到的东东">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/06/16/前端/vue-quill-editor custom button base64 to imgUrl/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">小学生</h4>
+        
+            <div id="about-card-bio"><p>海纳百川，有容乃大</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>程序猿</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                china
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/icon2.gif" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <h3 class="media-heading">处女作一定要短</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2014年7月1日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h3 id="从前有个太监…"><a href="#从前有个太监…" class="headerlink" title="从前有个太监…"></a>从前有个太监…</h3></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <h3 class="media-heading">线性表</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <h3 class="media-heading">数据结构基础</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <h3 class="media-heading">查找</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <h3 class="media-heading">栈与队列</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <h3 class="media-heading">排序</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <h3 class="media-heading">算法</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <h3 class="media-heading">图</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <h3 class="media-heading">串</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <h3 class="media-heading">树</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 150 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'wlq'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>

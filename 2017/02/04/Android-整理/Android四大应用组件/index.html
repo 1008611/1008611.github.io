@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="学海无涯...">
+    <title>Android四大应用组件 - 学海无涯...</title>
+    <meta name="author" content="小学生">
+    
+        <meta name="keywords" content="javascript,hexo">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="温故而知新，系统整理一下。">
+<meta name="keywords" content="javascript,hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Android四大应用组件">
+<meta property="og:url" content="https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/index.html">
+<meta property="og:site_name" content="学海无涯...">
+<meta property="og:description" content="温故而知新，系统整理一下。">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://images.cnitblog.com/blog/325852/201303/24233205-ccefbc4a326048d79b111d05d1f8ff03.png">
+<meta property="og:updated_time" content="2017-02-15T09:26:24.419Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android四大应用组件">
+<meta name="twitter:description" content="温故而知新，系统整理一下。">
+<meta name="twitter:image" content="http://images.cnitblog.com/blog/325852/201303/24233205-ccefbc4a326048d79b111d05d1f8ff03.png">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://1008611.github.io/assets/images/icon3.gif"/>
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg" />
+    
+    
+        <meta property="og:image" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://oims9p4rv.bkt.clouddn.com/android_zj.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">学海无涯...</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">小学生</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>海纳百川，有容乃大</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/1008611" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://stackoverflow.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-center
+                    "
+             style="background-image:url('http://oims9p4rv.bkt.clouddn.com/android_zj.jpg');"
+             data-behavior="4">
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaOut
+                        hasCoverCaption">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+        <span class="post-header-cover-caption caption">happy new year</span>
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            Android四大应用组件
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-02-04T12:58:00+08:00">
+	
+		    2月 04, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Android总结篇/">Android总结篇</a>
+
+
+    
+</div>
+
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>  温故而知新，系统整理一下。<br>  <a id="more"></a></p>
+<h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><ol>
+<li><p>Activity的理解:<br>  1).  Activity用来提供能与用户进行交互的用户界面<br>  2). 组件的特点:</p>
+<pre><code>它的类必须实现特定接口或继承特定类
+需要在配置文件中配置其全类名
+它的对象不是通过new来创建的, 而是系统自动创建的
+它的对象具有一定的生命周期, 它的类中有对应的生命周期回调方法
+</code></pre></li>
+<li><p>Intent的理解</p>
+<pre><code>Intent是Activity, Service和BroadcastReceiver这三个应用组件之间进行通信的信使, 
+可以携带所需要的数据
+intent会被交给ActivityManager去完成
+</code></pre></li>
+<li>Intent的使用:<pre><code>1). 创建对象:
+       显示意图: 明确指定目标的意图, 操作当前自己应用的组件
+            Intent(Context context, Class c)
+       隐式意图: 没有明确指定目标的意图, 操作不是当前应用自己的组件
+            Intent(String action)
+  2). 携带数据
+       putExtra(String name, Xxx value);
+       Xxx getXxxExtra(String name)
+       setData(Uri uri)  //Uri.parse(prefix+&quot;:&quot;+数据) //prefix: tel, smsto, content: , file, http
+</code></pre></li>
+<li>Activity的使用:<br>  1). 编写Activity<pre><code>1. 定义Activity类的子类HelloActivity
+ 2. 在AndroidManifest.xml配置定义的组件
+ 3. 定义布局文件activity_hello.xml
+ 4. 重写Activity的onCreate(), 加载布局文件
+</code></pre>  2). 启动Activity<pre><code>a. 一般启动:
+    startActivity(intent)
+b. 带回调启动:
+     startActivityForResult(intent, int requestCode)
+     onActivityResult(int reqCode, int resultCode, Intent data)
+</code></pre>  3). 关闭Activity<pre><code>a. 一般关闭:
+     finish();
+ b. 带结果的关闭    
+       setResult(int resultCode, Intent data)   
+       finish();
+</code></pre></li>
+<li><p>Activity的生命周期<br>  1). Activity(界面)的状态</p>
+<pre><code>运行状态: 可见也可操作
+暂停状态: 可见但不可操作
+停止状态: 不可见，但对象存在 
+死亡状态: 对象不存在
+</code></pre><p>  2). 生命周期方法调用过程</p>
+</li>
+<li><p>TaskStack和lauchMode(理解)<br>  1). TaskStack</p>
+<pre><code>a. 在Android中，用一个称之为Task Stack (回退栈)结构来存储管理启动的Activity对象
+b. 一个应用启动,系统就会为其创建一个对应的TaskStack来存储并管理Activity对象
+c. 窗口中显示的Activity是最前端的Tasktack的顶部的Activity
+</code></pre><p>  2). lauchMode</p>
+</li>
+</ol>
+<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><ol>
+<li><p>Service的理解:<br>  1).  区别Service与Activity?</p>
+<pre><code>①. Activity:
+          Activity对应一应用界面
+          应用退出, 所有的activity都会死亡
+②. Service
+          不与任何界面关联
+          应用退出Service仍在运行
+</code></pre><p>  2). 区别Service与Thread?</p>
+<pre><code>①. Service
+            用来在后台完成一个时间跨度比较大的工作的应用组件
+            应用退出, Service不会停止, 且应用再次进入后可以与正在运行的Service进行通信
+            Service的生命周期方法运行在主线程, 如果Service想做持续时间比较长的工作, 需要启动一个分线程(Thread)
+②. Thread
+           用来开启一个分线程的类, 做一个长时间的工作
+            应用退出, Thread不会停止, 但再次进入后不能再控制前面启动的Thread对象
+</code></pre></li>
+<li><p>Service的定义</p>
+<pre><code>1). 定义Service的一个实现类:
+     public class MyService extends Service{
+         //重写生命周期方法
+     }
+</code></pre><p>  2). 注册:</p>
+<pre><code>&lt;service name=&quot;MyService的全类名&quot;&gt;
+     &lt;intent-filter&gt;
+          &lt;action name=&quot;&quot;/&gt;
+</code></pre></li>
+<li><p>Service的启动与停止<br>  1). 启动:</p>
+<pre><code>a. startService(intent)
+b. bindService(intent, serviceConnection)
+</code></pre><p>  2). 停止:</p>
+<pre><code>a. stopService(intent)
+b. unbindService(serviceConnection)
+</code></pre></li>
+<li><p>Service的生命周期<br>   <img src="http://images.cnitblog.com/blog/325852/201303/24233205-ccefbc4a326048d79b111d05d1f8ff03.png" alt=""><br>4.1. startService<br>第一次–&gt;MyLocalService()–&gt;onCreate()—&gt;onStartCommand()<br>后面的–&gt;onStartCommand(intent)<br>4.2. stopService()<br>第一次–&gt;onDetroy()<br>后面的: 没有任何反应, 也不抛出异常<br>4.3. bindService<br>第一次: –&gt;MyLocalService()–&gt;onCreate()–&gt;onBind()–&gt;onServiceConnected()<br>后面: 没有任何反应, 也不会抛出异常<br>4.4. unbindServie<br>第一次: –&gt;onUnbind()–如果没有其它Client端绑定–&gt;onDestroy()<br>后面: 抛出异常<br>注意如果是bindService: 如果Activity退出, 必须先解除绑定:  onDetroy()中unbindService()<br>4.5. 远程Service的使用(AIDL)<br>  1). 简单理解Service<br>  2). 根据PPT将测试做出来</p>
+</li>
+</ol>
+<p>4.6. 什么时候会用到反射?<br>     1). 显示意图<br>     2). API被隐藏<br>     3). 功能清单文件配置应用组件的全类名<br>     4). 布局文件</p>
+<h3 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h3><ol>
+<li><p>理解<br>  1). 特点和作用<br>广播事件处理属于系统级的事件处理(一般事件处理是属于View级的事件处理)<br>广播的发送和接收是异步处理的过程，通常一个广播会被订阅此广播的多个接收者接收<br>广播事件处理过程即针对某一广播作出响应过程<br>广播事件机制是应用程序(进程间)之间通信的一种手段<br>  2). 相关API</p>
+<pre><code>a. Context
+</code></pre><p>sendBroadcast(Intent intent) : 发送一般广播<br>sendOrderedBroadcast(Intent intent) : 发送有序广播<br>registerReceiver(receiver, intentFilter) : 注册广播接收器<br>unRegisterReceiver(receiver) : 解注册广播接收器</p>
+<pre><code>b.  BroadcastReceiver
+</code></pre><p>onReceive(Context context, Intent intent) : 接收到广播的回调<br>abortBroadcast() : 中断广播的继续传播<br>boolean isOrderedBroadcast() : 判断是否是有序广播</p>
+<p>  3). 常见广播:<br>收到短信广播 : android.provider.Telephony.SMS_RECEIVED<br>开机完成广播 : Intent.ACTION_BOOT_COMPLETED<br>应用被卸载广播 : Intent.ACTION_PACKAGE_REMOVED<br>手机锁屏 : Intent.ACTION_SCREEN_OFF<br>手机开屏 : Intent.ACTION_SCREEN_ON</p>
+</li>
+<li>发送广播<br>  1). 发送一般广播<pre><code>context.sendBroadcast(intent)
+</code></pre>  2). 发送有序广播<pre><code>context.sendOrderedBroadcast(intent)
+</code></pre>  3). 两种广播的区别</li>
+</ol>
+<ol>
+<li><p>注册广播接收器<br> 1). 编写receiver类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBroadcastReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span></span>&#123;</span><br><span class="line">     <span class="comment">//处理广播</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2). 注册receiver</p>
+<pre><code>方式一: 配置文件注册(静态注册)
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;receiver android:name=<span class="string">"com.atguigu.t6_br.MyBroadcastReceiver"</span>&gt;</span><br><span class="line">     &lt;!--priority指定当前receiver的优先级, 值是<span class="number">0</span>-<span class="number">1000</span>, 越大越好  --&gt;</span><br><span class="line">     &lt;intent-filter android:priority=<span class="string">"500"</span>&gt;</span><br><span class="line">         &lt;action android:name=<span class="string">"com.atguigu.t6_br.mybroadcastreceiver"</span>/&gt;</span><br><span class="line">     &lt;/intent-filter&gt;</span><br><span class="line"> &lt;/receiver&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>方式二: 硬编码注册(动态注册)
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyBroadcastReceiver2 receiver2 = <span class="keyword">new</span> MyBroadcastReceiver2();</span><br><span class="line">IntentFilter filter = <span class="keyword">new</span> IntentFilter(action);</span><br><span class="line">registerReceiver(receiver2, filter);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>3). 两种注册方式的区别</p>
+<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><ol>
+<li>理解<br>  1). 为会么要有ContentProvider?<pre><code>a. 数据库文件只能当前应用访问, 别的应用不能直接访问
+b. 在真实的应用需求中, 可能需要应用操作其它应用的数据库表数据
+</code></pre>  2). ContentProvider是什么?<pre><code> ContentProvider是四大应用组件之一
+ 当前应用使用ContentProvider将数据库表数据操作暴露给其它应用访问
+ 其它应用需要使用ContentResolver来调用ContentProvider的方法
+它们之间的调用是通过Uri来进行交流的
+</code></pre></li>
+<li><p>相关API:<br>  1). ContentProvider: 内容提供者类</p>
+<pre><code>a. CRUD的方法: query(), insert(), update(), delete()
+b. onCreate()
+</code></pre><p>  2). ContentResolver: 内容解析器类 : </p>
+<pre><code>a. CRUD的方法: 
+      query(), 
+      insert(),
+      update(), 
+      delete()
+b. 实现观察的相关方法:
+       registContentObserver()
+       unRegistContentObserver()
+       notityChanged()
+c. 得到它的对象
+     context.getCOntentResolver();
+</code></pre><p>  3). ContentObserver: 内容观察者类</p>
+<pre><code>void onChange(boolean selfChange) : 数据改变, 且执行了notityChanged()
+</code></pre><p>  4). Uri: 包含一个具有一定格式的字符串所对应资源的类</p>
+<pre><code>A : 是一个前缀，表示是由ContentProvider提供，固定不变
+</code></pre><p>B : authority, 标识是哪个Provider,不同的Provider此部分必须不同。<br>C : 对应于哪张表 student<br>D : id值, 对应表中的哪条记录<br>  5). UriMatcher: 用来识别uri的一个uri容器</p>
+<pre><code>//添加一个合法的URI
+</code></pre><p>void addURI(String authority, String path, int code)<br>//匹配指定的uri, 返回匹配码<br>int match(Uri uri)<br>  6). ContentUris: 操作uri的工具类<br>   //解析uri, 得到其中的id<br>   long parseId(Uri contentUri)<br>  //添加id到指定的uri中<br>  Uri withAppendedId(Uri contentUri, long id) </p>
+</li>
+</ol>
+<ol>
+<li>自定义ContentProvider<pre><code>1). 编写ContentProvider子类
+</code></pre>class StudentContentProvider extends ContentProvider {<br>//实现inert、delete、update和query等方法<br>}<pre><code>2). 在manifest.xml中注册
+</code></pre>&lt;provider<pre><code>android:name=&quot;.StudentContentProvider&quot;
+android:authorities=&quot;com.atguigu.provider.studentprovider&quot; 
+android:exported=&quot;true&quot;/&gt; //标识是否允许其它应用访问,默认是false
+</code></pre></li>
+<li>使用ContentResolver访问ContentProvider<pre><code>1). 得到ContentResolver的对象
+2). 调用query(), delete(), update(), insert()方法调用ContentProvider对应的方法
+     操作ContentResolver: 注册, 解注册, 通知
+</code></pre></li>
+</ol>
+<p>——相关资料推荐<br><a href="http://blog.csdn.net/liuhe688/article/details/9494411" target="_blank" rel="external"> android 图片自定义三级缓存实现以及原理、图片错位解决</a><br><a href="http://blog.csdn.net/matrix_xu/article/details/7974393" target="_blank" rel="external">Android中IntentService与Service的区别 </a></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android总结篇/">Android总结篇</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的线程与进程/"  data-tooltip="Android中的线程与进程">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的数据存储/" data-tooltip="Android中的数据存储">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2017/02/04/Android-整理/Android四大应用组件/"
+     data-title="Android四大应用组件" data-url="https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 小学生. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的线程与进程/"  data-tooltip="Android中的线程与进程">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/02/04/Android-整理/Android中的数据存储/" data-tooltip="Android中的数据存储">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://1008611.github.io/2017/02/04/Android-整理/Android四大应用组件/">
+                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/icon3.gif" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">小学生</h4>
+        
+            <div id="about-card-bio"><p>海纳百川，有容乃大</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>程序猿</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                china
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/icon2.gif" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2014/07/01/随笔/处女作一定要短/">
+                            <h3 class="media-heading">处女作一定要短</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2014年7月1日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h3 id="从前有个太监…"><a href="#从前有个太监…" class="headerlink" title="从前有个太监…"></a>从前有个太监…</h3></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/线性表/">
+                            <h3 class="media-heading">线性表</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/数据结构基础/">
+                            <h3 class="media-heading">数据结构基础</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/查找/">
+                            <h3 class="media-heading">查找</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/栈与队列/">
+                            <h3 class="media-heading">栈与队列</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/排序/">
+                            <h3 class="media-heading">排序</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/算法/">
+                            <h3 class="media-heading">算法</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/图/">
+                            <h3 class="media-heading">图</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/串/">
+                            <h3 class="media-heading">串</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <img class="media-image" src="http://oims9p4rv.bkt.clouddn.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://1008611.github.io/2015/02/08/数据结构/树/">
+                            <h3 class="media-heading">树</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年2月8日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>  数据结构整理篇。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 150 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'wlq'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>
